@@ -23,7 +23,7 @@ var refresh = (movies) => {
             `<div class="cards" >` +
 
 
-            `<a class="underline" href="#ex${id}" rel="modal:open">` +
+            `<a class="underline zoom" href="#ex${id}" rel="modal:open">` +
             `<div id="listItem">` +
             `<li>${title}</li>` +
             `</div>` +
@@ -34,11 +34,12 @@ var refresh = (movies) => {
 
             `<form>` +
             `<br>` +
-            `<input class="editDesc" id="${id}descriptionEdit" type="text">` +
+            `<input class="editDesc" id="${id}descriptionEdit" type="text" placeholder="description">` +
             `    <br>
-        <label>Genre
+        <label>
         <br>
-        <select id="${id}genre" name="genres">
+        <select class="modalGenreSelect" id="${id}genre" name="genres">
+        <option value="choose">Pick A Genre</option>
         <option value="action">Action</option>
         <option value="horror">Horror</option>
         <option value="romance">Romance</option>
@@ -48,11 +49,14 @@ var refresh = (movies) => {
     <option value="anime">Anime</option>
         <option value="documentary">Documentary</option>
         <option value="western">Western</option>
-
         </select>
         </label>
         <br>` +
-            `<button type="submit" class="editButt" value="${id}">submit</button>` +
+            `<br>`+
+            `<button type="submit" class="editButt modalGenreSelect" value="${id}">submit</button>` +
+            `<br><br>`+
+            `<button value="${id}" type="submit" class="deleteButton">delete</button>` +
+
             `</form>` +
             `</div>` +
             `</a>` +
@@ -69,7 +73,6 @@ var refresh = (movies) => {
             `<input id="${id}rating1" type="radio" name="${id}" value="${id}" class="radio1">` +
             `<label for="${id}rating1">1</label>` +
             `</span>` +
-            `<button value="${id}" type="submit" class="deleteButton">delete</button>` +
             `<div>`
         );
 
@@ -121,10 +124,17 @@ var refresh = (movies) => {
     $(".editButt").click(function (e) {
         e.preventDefault();
         let id = $('#idNumber').val();
-        editMovie($(this).val(), {
-            "description": $(`#${$(this).val()}descriptionEdit`).val(),
-            "genre": $(`#${$(this).val()}genre`).val()
-        });
+        if ($(`#${$(this).val()}genre`).val() === `choose`){
+            editMovie($(this).val(), {
+                "description": $(`#${$(this).val()}descriptionEdit`).val()
+            });
+        } else {
+            editMovie($(this).val(), {
+                "description": $(`#${$(this).val()}descriptionEdit`).val(),
+                "genre": $(`#${$(this).val()}genre`).val()
+            });
+        }
+
         load();
         getMovies().then((movies) => refresh(movies));
     });

@@ -1,41 +1,24 @@
 {
   "movies": [
     {
-      "title": "Greeks",
-      "rating": "1",
-      "description": "",
-      "id": 27,
-      "genre": "western"
-    },
-    {
-      "title": "Fog",
-      "rating": "3",
-      "description": "the fog movie",
-      "id": 28
-    },
-    {
-      "title": "creepers 2",
-      "rating": "3",
-      "description": "shhh it's creepy",
-      "id": 29
-    },
-    {
       "title": "whereeee",
       "rating": "5",
-      "description": "its that one ",
+      "description": "goo one",
       "id": 30
     },
     {
       "title": "thingy",
       "rating": "3",
-      "description": "5",
-      "id": 32
+      "description": "",
+      "id": 32,
+      "genre": "romance"
     },
     {
       "title": "Should be five",
       "rating": "5",
-      "description": "easfs",
-      "id": 33
+      "description": "",
+      "id": 33,
+      "genre": "comedy"
     },
     {
       "title": "Shoogar",
@@ -46,8 +29,9 @@
     {
       "title": "All Those Dumb Feelings",
       "rating": "4",
-      "description": "hfhfhf",
-      "id": 37
+      "description": "",
+      "id": 37,
+      "genre": "fantasy"
     },
     {
       "title": "Value Variable",

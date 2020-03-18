@@ -15,31 +15,26 @@ html, body {
 .headLine{
     font-size: 70px;
     color: #EDF5E1;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Teko', sans-serif;
     text-shadow: 0px 0px 40px black;
 }
 
 #firstForm{
     color: whitesmoke;
-    font-size: 15px;
+    font-size: 24px;
     text-transform: uppercase;
     background: black;
     box-shadow: 0px 0px 10px black;
     font-family: 'Exo 2', sans-serif;
-    padding: 4px;
+    padding: 8px;
     border-radius: 4px;
-    margin: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-#title{
-    margin: 2px;
-}
-#description{
-    margin: 2px;
-}
+
+
 .container {
     display: flex;
     text-align: center;
@@ -167,7 +162,7 @@ html, body {
 .modalTitle{
     color: black;
     background: #379683;
-    font-size: 22px;
+    font-size: 24px;
     text-transform: uppercase;
     font-family: 'Exo 2', sans-serif;
     padding: 2px;
@@ -196,6 +191,49 @@ html, body {
     border-radius: 4px;
 }
 
+.modalGenreSelect{
+    color: white;
+    background: #05386B;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'Exo 2', sans-serif;
+    padding: 2px;
+    width: 100%;
+    border-radius: 4px;
+}
+.editDesc{
+    color: black;
+    background: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'Exo 2', sans-serif;
+    padding: 2px;
+    width: 100%;
+    border-radius: 4px;
+}
 li {
     list-style: none;
+}
+
+.zoom {
+    transition: transform .2s;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2);
+}
+
+.deleteButton{
+    color: black;
+    background: red;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'Exo 2', sans-serif;
+    padding: 2px;
+    width: 25%;
+    border-radius: 4px;
 }

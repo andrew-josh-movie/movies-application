@@ -5,7 +5,7 @@
     <title>My Application</title>
     <link rel="stylesheet" href="/style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Exo+2|Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Exo+2|Yanone+Kaffeesatz|Teko:700&display=swap" rel="stylesheet">
     <style>
         .highlighted {
             background: yellow;
@@ -33,11 +33,11 @@
     <form id="firstForm">
         <label for="title">Title</label>
         <br>
-        <input id="title" type="text">
+        <input class="editDesc" id="title" type="text">
         <br>
         <label for="description">Description</label>
         <br>
-        <input id="description" type="text">
+        <input class="editDesc" id="description" type="text">
         <br>
         <span class="starRating">
         <input id="rating5" type="radio" name="rating0" value="5" class="editRadio">
@@ -53,7 +53,8 @@
         </span>
                 <br>
                 <label>
-                    <select id="genre" name="genres">
+                    <select class="modalGenreSelect" id="genre" name="genres">
+                        <option value="PICK A GENRE">Pick A Genre</option>
                         <option value="action">Action</option>
                         <option value="horror">Horror</option>
                         <option value="romance">Romance</option>
@@ -63,12 +64,11 @@
                         <option value="anime">Anime</option>
                         <option value="documentary">Documentary</option>
                         <option value="western">Western</option>
-
                     </select>
                 </label>
                 <br>
 
-        <button type="submit" id="submit">Add</button>
+        <button class="modalGenreSelect" type="submit" id="submit">Add</button>
     </form>
     </div>
     </p>
