@@ -23,9 +23,10 @@ var refresh = (movies) => {
 
 
         `<a class="underline" href="#ex${id}" rel="modal:open">`+
-        `<li>${title}</li>` +
+        `<div id="listItem">`+
+        `<li>${title}</li>`+
+        `</div>` +
         `<div id="ex${id}" class="modal">` +
-        `<div class="circles"></div>`+
         `<p class="modalTitle">${title}</p>`+
         `<p class="modalDescription">${description}</p>`+
         `<p class="modalGenre"> Genre: ${genre}</p>`+
