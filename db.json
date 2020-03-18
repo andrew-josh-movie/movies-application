@@ -1,22 +1,16 @@
 {
   "movies": [
     {
-      "title": "whereeee",
-      "rating": "5",
-      "description": "goo one",
-      "id": 30
-    },
-    {
       "title": "thingy",
       "rating": "3",
-      "description": "",
+      "description": "afaefa",
       "id": 32,
-      "genre": "romance"
+      "genre": null
     },
     {
       "title": "Should be five",
       "rating": "5",
-      "description": "",
+      "description": "hi",
       "id": 33,
       "genre": "comedy"
     },
@@ -24,12 +18,13 @@
       "title": "Shoogar",
       "rating": "2",
       "description": "cool movie about cool people",
-      "id": 36
+      "id": 36,
+      "genre": "romance"
     },
     {
       "title": "All Those Dumb Feelings",
       "rating": "4",
-      "description": "",
+      "description": "efaefaef",
       "id": 37,
       "genre": "fantasy"
     },

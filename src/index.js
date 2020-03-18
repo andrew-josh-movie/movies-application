@@ -23,7 +23,7 @@ var refresh = (movies) => {
             `<div class="cards" >` +
 
 
-            `<a class="underline zoom" href="#ex${id}" rel="modal:open">` +
+            `<a class="underline zoom" href="#ex${id}" rel="modal:open" id="modal${id}">` +
             `<div id="listItem">` +
             `<li>${title}</li>` +
             `</div>` +
@@ -124,16 +124,53 @@ var refresh = (movies) => {
     $(".editButt").click(function (e) {
         e.preventDefault();
         let id = $('#idNumber').val();
-        if ($(`#${$(this).val()}genre`).val() === `choose`){
+        // if ($(`#${$(this).val()}genre`).val()) === `choose` && $(`#${$(this).val()}descriptionEdit`)){
+        //     editMovie($(this).val(), {
+        //         "description": $(`#${$(this).val()}descriptionEdit`).val()
+        //     });
+        // } else if (!$(`#${$(this).val()}descriptionEdit`).val()){
+        //     editMovie($(this).val(), {
+        //         "genre": $(`#${$(this).val()}genre`).val()
+        //     });
+        // } else if (!$(`#${$(this).val()}descriptionEdit`) && $(!`#${$(this).val()}genre`).val() === `choose`){
+        //     editMovie($(this).val(), {
+        //         "description": $(`#${$(this).val()}descriptionEdit`).val(),
+        //         "genre": $(`#${$(this).val()}genre`).val()
+        //     });
+        // } else {
+        //     editMovie($(this).val(), {
+        //         "description": $(`#${$(this).val()}descriptionEdit`).val(),
+        //         "genre": $(`#${$(this).val()}genre`).val()
+        //     });
+        // }
+
+
+        console.log($(`#${$(this).val()}genre`).val() + $(`#${$(this).val()}descriptionEdit`).val())
+
+        if ($(`#${$(this).val()}genre`).val() == 'choose' && !($(`#${$(this).val()}descriptionEdit`).val())) {
+            console.log('only nothing');
+        } else if($(`#${$(this).val()}genre`).val() == 'choose' && $(`#${$(this).val()}descriptionEdit`).val()){
+            console.log('only description');
             editMovie($(this).val(), {
-                "description": $(`#${$(this).val()}descriptionEdit`).val()
-            });
+                        "description": $(`#${$(this).val()}descriptionEdit`).val()
+                    });
+        } else if ($(`#${$(this).val()}genre`).val() != 'choose' && !($(`#${$(this).val()}descriptionEdit`).val())){
+            console.log('only genre');
+            editMovie($(this).val(), {
+                        "genre": $(`#${$(this).val()}genre`).val()
+                    });
         } else {
+            console.log('only all');
             editMovie($(this).val(), {
-                "description": $(`#${$(this).val()}descriptionEdit`).val(),
-                "genre": $(`#${$(this).val()}genre`).val()
-            });
+                        "description": $(`#${$(this).val()}descriptionEdit`).val(),
+                        "genre": $(`#${$(this).val()}genre`).val()
+                    });
         }
+
+        // $(`#modal${id}`).css('display', 'none');
+        // $(`#${$(this).val()}descriptionEdit`).attr('value', '');
+        // $(`#${$(this).val()}genre`).attr('value', '');
+
 
         load();
         getMovies().then((movies) => refresh(movies));
