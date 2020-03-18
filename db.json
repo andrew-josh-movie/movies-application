@@ -3,8 +3,9 @@
     {
       "title": "Greeks",
       "rating": "1",
-      "description": "A movie about the greeks and their rule",
-      "id": 27
+      "description": "",
+      "id": 27,
+      "genre": "western"
     },
     {
       "title": "Fog",
