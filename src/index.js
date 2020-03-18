@@ -17,7 +17,7 @@ const {getMovies, addMovie, editMovie, deleteMovie} = require('./api.js');
 var refresh = (movies) => {
 
     $('#movies').html('');
-    movies.forEach(({title, rating, id, description, genre, viewed}) => {
+    movies.forEach(({title, rating, id, description, genre}) => {
 
         $('#movies').append(
             `<div class="cards" >` +

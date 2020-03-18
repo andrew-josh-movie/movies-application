@@ -1,22 +1,23 @@
 html, body {
     height: 100%;
     background: black;
+    margin: 0px;
 }
 
 .head{
     height: 170px;
     width: 100%;
-    background: #05386B;
+    background: linear-gradient(90deg, rgba(5,53,107,1) 20%, rgba(5,75,107,1) 96%);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .headLine{
-    font-size: 70px;
+    font-size: 60px;
     color: #EDF5E1;
-    font-family: 'Teko', sans-serif;
-    text-shadow: 0px 0px 40px black;
+    font-family: 'Cinzel', serif;
+    text-shadow: 0px -2px 5px black;
 }
 
 #firstForm{
@@ -40,7 +41,7 @@ html, body {
     text-align: center;
     justify-content: center;
     width: 100%;
-    background: #45A29E;
+    background: #242534;
 }
 
 .starRating{
@@ -64,8 +65,8 @@ html, body {
     text-align: center;
     height: 150px;
     width: 120px;
-    border: 1px solid #FBEEC1;
-    background: #05386B;
+    /*border: 1px solid #FBEEC1;*/
+    background: linear-gradient(38deg, rgba(55,56,150,1) 0%, rgba(5,33,107,1) 41%, rgba(5,55,107,1) 100%);
     box-shadow: 0px 0px 10px black;
     font-family: 'Exo 2', sans-serif;
     padding: 10px;
@@ -97,17 +98,6 @@ html, body {
 .movieBox{
     background: grey;
 
-}
-
-.circles{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background: red;
 }
 
 .starRating:not(old){
@@ -149,15 +139,16 @@ html, body {
     opacity : 1;
 }
 .modalMainPage{
-    color: black;
-    background: #379683;
+    color: ghostwhite;
+    text-shadow: 0px 0px 5px;
+    background: linear-gradient(90deg, rgba(55,150,131,1) 0%, rgba(5,53,107,1) 100%);
     font-size: 22px;
     text-transform: uppercase;
     font-family: 'Exo 2', sans-serif;
     padding: 2px;
     width: 100%;
     border-radius: 4px;
-    box-shadow: 0px 0px 8px;
+    box-shadow: 0px 0px 8px black;
 }
 .modalTitle{
     color: black;
