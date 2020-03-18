@@ -140,10 +140,10 @@ var load = () => {
   $('#movies').html('');
 
   $('#movies').append(
-      '<li>SUP</li>'
+      '<img src="ZZ5H.gif">'
   );
 };
-
+//comment
 // $('#submitEdit').click(function (e) {
 //   e.preventDefault();
 //   editMovie($('#idNumber').val());
